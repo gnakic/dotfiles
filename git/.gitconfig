@@ -1,0 +1,7 @@
+[user]
+	name = Gabriel Nakic
+	email = gnakic@protonmail.com
+[github]
+    user = gabluc
+[core]
+    excludesfile = ~/.gitignore.global
