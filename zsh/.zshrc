@@ -104,4 +104,3 @@ ENVIRONMENT_SCRIPT="$HOME/.environment.sh"
 if test -f $ENVIRONMENT_SCRIPT; then
     source $ENVIRONMENT_SCRIPT
 fi
-
