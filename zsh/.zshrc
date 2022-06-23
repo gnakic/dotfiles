@@ -97,6 +97,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export BAT_THEME='gruvbox-dark'
+
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
 ENVIRONMENT_SCRIPT="$HOME/.environment.sh"
