@@ -42,6 +42,14 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Org/")
 
+;; Initial window size
+(setq initial-frame-alist
+      (append initial-frame-alist
+              '(
+                ;;(left   . 50)
+                ;;(top    . 50)
+                (width  . 106)
+                (height . 60))))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
