@@ -27,10 +27,8 @@ filetype off
 
 " Turn on syntax highlighting
 syntax on
-set t_Co=256
-set cursorline
-colorscheme onehalflight
-syntax on
+
+colorscheme gruvbox
 
 " For plugins to load correctly
 filetype plugin indent on
@@ -57,15 +55,7 @@ set formatoptions=tcqrn1
 set expandtab
 set noshiftround
 
-" True Colors
-
-highlight Comment gui=none cterm=none
-
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
+set termguicolors
 
 " EasyMotion
 map gs <Plug>(easymotion-prefix)
