@@ -14,6 +14,7 @@ Plug 'morhetz/gruvbox'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'sainnhe/gruvbox-material'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
@@ -28,7 +29,17 @@ filetype off
 " Turn on syntax highlighting
 syntax on
 
-colorscheme gruvbox
+if has('termguicolors')
+  set termguicolors
+endif
+
+set background=dark
+
+let g:gruvbox_material_disable_italic_comment = 1
+let g:airline_theme = 'gruvbox_material'
+let g:gruvbox_material_transparent_background = 1
+
+colorscheme gruvbox-material
 
 " For plugins to load correctly
 filetype plugin indent on
@@ -54,8 +65,6 @@ set textwidth=79
 set formatoptions=tcqrn1
 set expandtab
 set noshiftround
-
-set termguicolors
 
 " EasyMotion
 map gs <Plug>(easymotion-prefix)
