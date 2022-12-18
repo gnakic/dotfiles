@@ -97,7 +97,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export BAT_THEME='gruvbox-dark'
+alias rusti='evcxr'
+
+export BAT_THEME='Solarized (light)'
 
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
@@ -106,3 +108,4 @@ ENVIRONMENT_SCRIPT="$HOME/.environment.sh"
 if test -f $ENVIRONMENT_SCRIPT; then
     source $ENVIRONMENT_SCRIPT
 fi
+
