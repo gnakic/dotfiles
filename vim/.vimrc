@@ -15,6 +15,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sainnhe/gruvbox-material'
+Plug 'altercation/vim-colors-solarized'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
@@ -30,16 +31,16 @@ filetype off
 syntax on
 
 if has('termguicolors')
+  set t_8f=\[[38;2;%lu;%lu;%lum
+  set t_8b=\[[48;2;%lu;%lu;%lum
   set termguicolors
 endif
 
-set background=dark
+set background=light
+colorscheme solarized
 
-let g:gruvbox_material_disable_italic_comment = 1
-let g:airline_theme = 'gruvbox_material'
-let g:gruvbox_material_transparent_background = 1
-
-colorscheme gruvbox-material
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
 
 " For plugins to load correctly
 filetype plugin indent on
