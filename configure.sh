@@ -1,0 +1,1 @@
+defaults write org.gnu.Emacs HideDocumentIcon YES
