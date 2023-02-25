@@ -33,12 +33,22 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;; `gruvbox-material' contrast and palette options
+
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
+
 (setq ns-use-proxy-icon nil)
-(setq frame-title-format nil)
-(setq doom-gruvbox-material-background  "medium")
+;; (setq frame-title-format nil)
+
+(setq doom-gruvbox-material-background  "medium"  ; or hard (defaults to soft)
+      doom-gruvbox-material-palette     "material"
+      doom-gruvbox-material-brighter-modeline t) ; or original (defaults to material)
+
 (setq doom-theme 'doom-gruvbox-material)
+
+;; LSP settings
+(setq lsp-lens-enable nil)
+
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -89,3 +99,11 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+;;
+
+;; region selection bindings
+
+(map!
+ :nv "J" #'er/contract-region
+ :nv "K" #'er/expand-region
+ )

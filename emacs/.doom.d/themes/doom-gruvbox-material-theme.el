@@ -189,12 +189,12 @@ Defaults to \"material\""
    (doc-comments   (doom-darken (if doom-gruvbox-material-brighter-comments green green) 0.15))
    (constants      violet)
    (functions      cyan)
-   (keywords       (doom-darken dark-green 0.25))
+   (keywords       red)
    (methods        cyan)
    (operators      blue)
    (type           orange)
    (strings        green)
-   (variables      cyan)
+   (variables      blue)
    (numbers        magenta)
    (region         `(,(doom-lighten (car bg-alt) 0.15) ,@(doom-lighten (cdr base1) 0.35)))
    (error          red)
@@ -216,11 +216,11 @@ Defaults to \"material\""
 
    (modeline-bg
     (if -modeline-bright
-        (doom-darken blue 0.475)
+        (doom-darken grey 0.495)
       `(,(doom-darken (car bg-alt) 0.15) ,@(cdr base0))))
    (modeline-bg-l
     (if -modeline-bright
-        (doom-darken blue 0.45)
+        (doom-darken grey 0.45)
       `(,(doom-darken (car bg-alt) 0.1) ,@(cdr base0))))
    (modeline-bg-inactive   `(,(doom-darken (car bg-alt) 0.1) ,@(cdr bg-alt)))
    (modeline-bg-inactive-l `(,(car bg-alt) ,@(cdr base1))))
@@ -322,7 +322,7 @@ Defaults to \"material\""
 
    ;; markdown-mode
    (markdown-markup-face :foreground base5)
-   (markdown-header-face :inherit 'bold :foreground blue)
+   (markdown-header-face :inherit 'bold :foreground red)
    ((markdown-code-face &override) :background (doom-lighten base3 0.05))
 
    ;; org-mode
@@ -354,9 +354,6 @@ Defaults to \"material\""
    (rainbow-delimiters-depth-4-face :foreground dark-yellow)
    (rainbow-delimiters-unmatched-face: :foreground fg :background 'nil)
    (show-paren-match :foreground bg :background dark-red)
-
-   ;; tree sitter
-   (tree-sitter-hl-face:method.call :foreground cyan :weight 'semi-bold)
 
    ;; others
    (isearch :foreground bg :background violet)
