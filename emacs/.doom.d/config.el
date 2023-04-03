@@ -44,7 +44,7 @@
       doom-gruvbox-material-palette     "material"
       doom-gruvbox-material-brighter-modeline t) ; or original (defaults to material)
 
-(setq doom-theme 'doom-gruvbox-material)
+(setq doom-theme 'doom-opera-light)
 
 ;; LSP settings
 (setq lsp-lens-enable nil)
@@ -105,5 +105,4 @@
 
 (map!
  :nv "J" #'er/contract-region
- :nv "K" #'er/expand-region
- )
+ :nv "K" #'er/expand-region)

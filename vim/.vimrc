@@ -34,15 +34,16 @@ if has('termguicolors')
   set termguicolors
 endif
 
-set background=dark
+set background=light
 
-let g:gruvbox_material_disable_italic_comment = 1
-let g:airline_theme = 'gruvbox_material'
-let g:gruvbox_material_transparent_background = 1
-
-colorscheme gruvbox-material
+colorscheme onehalflight
 " For plugins to load correctly
 filetype plugin indent on
+
+highlight Comment gui=none cterm=none 
+
+hi! Normal ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
 
 " Leader key
 let mapleader = " "
