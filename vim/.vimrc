@@ -34,9 +34,14 @@ if has('termguicolors')
   set termguicolors
 endif
 
-set background=light
+set background=dark
 
-colorscheme onehalflight
+let g:gruvbox_material_disable_italic_comment = 1
+let g:airline_theme = 'gruvbox_material'
+let g:gruvbox_material_transparent_background = 1
+
+colorscheme gruvbox-material
+
 " For plugins to load correctly
 filetype plugin indent on
 
