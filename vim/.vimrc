@@ -74,3 +74,6 @@ set noshiftround
 
 " EasyMotion
 map gs <Plug>(easymotion-prefix)
+
+" System clipboard
+set clipboard=unnamedplus
