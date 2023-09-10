@@ -109,3 +109,4 @@ if test -f $ENVIRONMENT_SCRIPT; then
     source $ENVIRONMENT_SCRIPT
 fi
 
+export DOTNET_ROOT='/usr/local/share/dotnet'
