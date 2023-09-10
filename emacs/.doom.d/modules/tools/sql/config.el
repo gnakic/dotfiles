@@ -1,6 +1,11 @@
 ;;; tools/sql/config.el -*- lexical-binding: t; -*-
 
-(use-package! ejc-sql :defer t)
+(use-package! ejc-sql
+  :defer t
+  :config
+  (add-hook 'ejc-sql-minor-mode-hook
+            (lambda ()
+              (ejc-eldoc-setup))))
 
 (after! ejc-sql (+sql/load-connections))
 
@@ -21,5 +26,5 @@
 
 (map! :leader
       (:prefix-map ("o" . "open")
-       (:prefix ("S" . "SQL")
-        :desc "Scratch buffer" "x" #'ejc-get-temp-editor-buffer)))
+                   (:prefix ("S" . "SQL")
+                    :desc "Scratch buffer" "x" #'ejc-get-temp-editor-buffer)))
