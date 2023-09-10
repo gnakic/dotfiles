@@ -16,6 +16,7 @@
   (setq ejc-complete-on-dot t))
 
 (use-package! sql
+  :defer t
   :config
   (map! :localleader
         :map sql-mode-map
