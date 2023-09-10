@@ -1,12 +1,8 @@
 ;;; tools/sql/config.el -*- lexical-binding: t; -*-
 
-(defvar +sql-default-connections-file "~/.ejc"
-  "Path to connections file.")
-
 (use-package! ejc-sql :defer t)
 
-(after! ejc-sql
-  (load +sql-default-connections-file))
+(after! ejc-sql (+sql/load-connections))
 
 (use-package! ejc-company
   :when (modulep! :completion company)
@@ -22,3 +18,8 @@
         :map sql-mode-map
         :desc "Open connection" "c" #'ejc-connect
         :desc "Close connection" "k" #'ejc-close-connection))
+
+(map! :leader
+      (:prefix-map ("o" . "open")
+       (:prefix ("S" . "SQL")
+        :desc "Scratch buffer" "x" #'ejc-get-temp-editor-buffer)))
