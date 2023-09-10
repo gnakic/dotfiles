@@ -106,10 +106,3 @@
 (map!
  :nv "J" #'er/contract-region
  :nv "K" #'er/expand-region)
-
-;; (require 'ejc-company)
-;; (defun ejc-after-emacs-init-hook ()
-;;   (push 'ejc-company-backend company-backends))
-;; (add-hook 'after-init-hook 'ejc-after-emacs-init-hook)
-
-;; (setq ejc-complete-on-dot t)

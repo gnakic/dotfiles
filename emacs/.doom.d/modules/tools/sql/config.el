@@ -13,7 +13,7 @@
   :when (modulep! :completion company)
   :after sql
   :config
-  (set-company-backend! 'sql-mode 'company-capf 'ejc-company-backend)
+  (set-company-backend! 'sql-mode 'company-capf 'ejc-company-backend 'company-yasnippet)
   (setq ejc-complete-on-dot t))
 
 (use-package! sql
@@ -24,7 +24,9 @@
         :desc "Open connection" "c" #'ejc-connect
         :desc "Close connection" "k" #'ejc-close-connection))
 
+
 (map! :leader
       (:prefix-map ("o" . "open")
                    (:prefix ("S" . "SQL")
+                    :desc "Reload connections config" "r" #'+sql/load-connections
                     :desc "Scratch buffer" "x" #'ejc-get-temp-editor-buffer)))

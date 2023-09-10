@@ -6,4 +6,5 @@
 ;;;###autoload
 (defun +sql/load-connections ()
   "Reload the connections configuration file"
+  (interactive)
   (load +sql-default-connections-file))
