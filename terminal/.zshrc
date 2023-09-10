@@ -101,7 +101,7 @@ alias rusti='evcxr'
 
 export BAT_THEME='gruvbox-dark'
 
-export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/.emacs.d/bin:$HOME/.config/emacs/bin:$PATH"
 
 ENVIRONMENT_SCRIPT="$HOME/.environment.sh"
 
