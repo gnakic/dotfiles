@@ -7,7 +7,8 @@
 (defun +prodigy/load-services ()
   "Load the services configuration file"
   (interactive)
-  (load +prodigy-services-file)
+  (when (file-exists-p +prodigy-services-file)
+    (load +prodigy-services-file))
   (prodigy-refresh))
 
 ;;;###autoload
