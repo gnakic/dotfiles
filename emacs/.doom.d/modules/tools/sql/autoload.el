@@ -1,10 +1,11 @@
 ;;; tools/sql/autoload.el -*- lexical-binding: t; -*-
 
-(defvar +sql-default-connections-file "~/.ejc"
+(defvar +sql-default-connections-file "~/.ejc-sql/connections.el"
   "Path to connections file.")
 
 ;;;###autoload
 (defun +sql/load-connections ()
-  "Reload the connections configuration file"
+  "Load the connections configuration file"
   (interactive)
-  (load +sql-default-connections-file))
+  (when (file-exists-p +sql-default-connections-file)
+    (load +sql-default-connections-file)))

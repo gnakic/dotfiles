@@ -3,6 +3,7 @@
 (use-package! ejc-sql
   :defer t
   :config
+  (setq ejc-temp-editor-file-path "~/.ejc-sql/")
   (add-hook 'ejc-sql-minor-mode-hook
             (lambda ()
               (ejc-eldoc-setup))))
