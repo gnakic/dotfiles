@@ -38,7 +38,7 @@
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 
 (setq ns-use-proxy-icon nil)
-;; (setq frame-title-format nil)
+(setq frame-title-format nil)
 
 (setq doom-gruvbox-material-background  "medium"  ; or hard (defaults to soft)
       doom-gruvbox-material-palette     "material"
@@ -63,10 +63,16 @@
 (setq initial-frame-alist
       (append initial-frame-alist
               '(
-                ;;(left   . 50)
-                ;;(top    . 50)
-                (width  . 96)
-                (height . 45))))
+                (left   . 0.5)
+                (top    . 0.5)
+                (width  . 156)
+                (height . 68))))
+
+;; Region selection bindings
+
+(map!
+ :nv "J" #'er/contract-region
+ :nv "K" #'er/expand-region)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -100,9 +106,3 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 ;;
-
-;; region selection bindings
-
-(map!
- :nv "J" #'er/contract-region
- :nv "K" #'er/expand-region)
