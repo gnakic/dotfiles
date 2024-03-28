@@ -105,8 +105,8 @@ export PATH="$HOME/.emacs.d/bin:$HOME/.config/emacs/bin:$PATH"
 
 ENVIRONMENT_SCRIPT="$HOME/.environment.sh"
 
-if test -f $ENVIRONMENT_SCRIPT; then
-    source $ENVIRONMENT_SCRIPT
+if test -f "$ENVIRONMENT_SCRIPT"; then
+    source "$ENVIRONMENT_SCRIPT"
 fi
 
 export DOTNET_ROOT='/usr/local/share/dotnet'

@@ -1,6 +1,4 @@
-set -o allexport
-. ./.env
-set +o allexport
+DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 STOW_FOLDERS="git,vim,emacs,terminal,ghc"
 
