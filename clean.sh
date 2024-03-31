@@ -6,6 +6,6 @@ pushd "$DOTFILES" || exit
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
     echo "Removing $folder"
-    stow -D "$folder"
+    stow -D --target "$HOME" "$folder"
 done
 popd || exit
