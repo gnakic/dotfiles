@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 STOW_FOLDERS="git,vim,emacs,terminal,ghc"
