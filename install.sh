@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function check_stow() {
     if ! hash "stow" > /dev/null 2>&1; then
         if [ "$(uname)" == "Darwin" ]; then
