@@ -1,4 +1,4 @@
-#+title: Readme
+#+title: Gabriel's dotfiles
 
 The dotfiles themselves use ~stow~ to manage configuration symlinks to the root of ~$HOME~.
 
