@@ -110,3 +110,13 @@ if test -f "$ENVIRONMENT_SCRIPT"; then
 fi
 
 export DOTNET_ROOT='/usr/local/share/dotnet'
+
+# opam configuration
+[[ ! -r /Users/gnakic/.opam/opam-init/init.zsh ]] || source /Users/gnakic/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+# bun completions
+[ -s "/Users/gnakic/.bun/_bun" ] && source "/Users/gnakic/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

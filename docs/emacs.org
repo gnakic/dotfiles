@@ -1,0 +1,47 @@
+#+TITLE: Emacs
+
+My preferred setup for Emacs on macOS.
+
+* Prerequisites
+
++ For native compilation, make sure to install ~libgccjit~
+
+#+begin_src
+xcode-select --install
+brew reinstall gcc libgccjit
+#+end_src
+
+* Instalation
+
+For a pretty, minimal installation of Emacs that looks nice, I use the [[https://github.com/railwaycat/homebrew-emacsmacport][Emacs Mac Port]] with the following configuration parameters:
+
+#+begin_src bash
+brew tap railwaycat/emacsmacport
+brew install emacs-mac --HEAD --with-modules --with-natural-title-bar --with-native-comp --with-emacs-big-sur-icon
+#+end_src
+
+~--HEAD~ (which is currently at Emacs 29.3 as of this writing and set to the [[https://bitbucket.org/mituharu/emacs-mac/src/work/][work]] branch) is used to include fixes to the title bar when the tool bar is off (leaves a fat title bar)
+
+To complete the setup for a transparent title bar without the title, the following is used:
+
+#+begin_src bash
+defaults write org.gnu.Emacs HideDocumentIcon YES
+defaults write org.gnu.Emacs TransparentTitleBar DARK
+#+end_src
+
+Symlink to =/Applications=:
+
+#+begin_src
+ln -s /opt/homebrew/opt/emacs-mac/Emacs.app /Applications/Emacs.app
+#+end_src
+
+Then the default installation method for Doom:
+
+#+begin_src
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+#+end_src
+
+* Useful links
++ [[https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org][Doom Emacs - Getting Started]]
++ [[https://bitbucket.org/mituharu/emacs-mac/src/master/][Mitsuharu's Emacs Mac Port]]
