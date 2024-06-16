@@ -103,20 +103,10 @@ export BAT_THEME='gruvbox-dark'
 
 export PATH="$HOME/.emacs.d/bin:$HOME/.config/emacs/bin:$PATH"
 
+export DOTNET_ROOT='/usr/local/share/dotnet'
+
 ENVIRONMENT_SCRIPT="$HOME/.environment.sh"
 
 if test -f "$ENVIRONMENT_SCRIPT"; then
     source "$ENVIRONMENT_SCRIPT"
 fi
-
-export DOTNET_ROOT='/usr/local/share/dotnet'
-
-# opam configuration
-[[ ! -r /Users/gnakic/.opam/opam-init/init.zsh ]] || source /Users/gnakic/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-
-# bun completions
-[ -s "/Users/gnakic/.bun/_bun" ] && source "/Users/gnakic/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
