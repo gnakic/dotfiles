@@ -44,7 +44,7 @@
       doom-gruvbox-material-palette     "material"
       doom-gruvbox-material-brighter-modeline t) ; or original (defaults to material)
 
-(setq doom-theme 'doom-gruvbox-material)
+(setq doom-theme 'doom-nord)
 
 ;; LSP settings
 (setq lsp-lens-enable nil)

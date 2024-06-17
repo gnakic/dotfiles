@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias rusti='evcxr'
 
-export BAT_THEME='gruvbox-dark'
+export BAT_THEME='Nord'
 
 export PATH="$HOME/.emacs.d/bin:$HOME/.config/emacs/bin:$PATH"
 
