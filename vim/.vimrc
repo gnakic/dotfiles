@@ -16,7 +16,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sainnhe/gruvbox-material'
 Plug 'altercation/vim-colors-solarized'
-Plug 'nordtheme/vim'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
@@ -37,8 +36,11 @@ endif
 
 set background=dark
 
+let g:gruvbox_material_disable_italic_comment = 1
+let g:airline_theme = 'gruvbox_material'
+let g:gruvbox_material_transparent_background = 1
 
-colorscheme nord
+colorscheme gruvbox-material
 
 " For plugins to load correctly
 filetype plugin indent on
