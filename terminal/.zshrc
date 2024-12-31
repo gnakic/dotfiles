@@ -98,8 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias rusti='evcxr'
-
-export BAT_THEME='gruvbox-dark'
+alias vim='nvim'
 
 export PATH="$HOME/.emacs.d/bin:$HOME/.config/emacs/bin:$PATH"
 
