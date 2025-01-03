@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 alias rusti='evcxr'
 alias vim='nvim'
 
-export PATH="$HOME/.emacs.d/bin:$HOME/.config/emacs/bin:$PATH"
+export PATH="$HOME/.emacs.d/bin:$HOME/.config/emacs/bin:/opt/homebrew/opt/libpq/bin:$PATH"
 
 export DOTNET_ROOT='/usr/local/share/dotnet'
 
