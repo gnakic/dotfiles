@@ -15,7 +15,7 @@ check_stow
 
 DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-STOW_FOLDERS="git,vim,terminal,ghc"
+STOW_FOLDERS="git,vim,shell,ghc"
 
 pushd "$DOTFILES" || exit
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
@@ -25,4 +25,4 @@ do
 done
 popd || exit
 
-git reset --hard
+# git reset --hard
