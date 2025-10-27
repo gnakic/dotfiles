@@ -3,3 +3,4 @@
 .idea
 phoityne.log
 .projectile
+postgres-language-server.jsonc

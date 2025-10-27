@@ -15,7 +15,7 @@ check_stow
 
 DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
-STOW_FOLDERS="git,vim,shell,ghc"
+STOW_FOLDERS="git,emacs,vim,shell,ghc"
 
 pushd "$DOTFILES" || exit
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
